@@ -11,15 +11,21 @@
 		roomdata.joinRoom(socket, "testroom"); // You do not have to create a room before joining it
 		
 		// You can define room variables:
-		roomdata.set(socket, "gamedata", {x:4, y:20}); // Creates a room variable called gamedata which holds a object
+		roomdata.set(socket, "gamedata", {x:4, y:20}); // Creates a room variable
+		roomdata.set(socket, "timesdied", 5); // Can also be a number,string,boolean etc
 		
 		// Then on every socket that has joined the same room you can retrieve the values:
 		console.log(roomdata.get(socket, "gamedata")); // Prints: { x: 4, y: 20 }
 		console.log(roomdata.get(socket, "gamedata").y); // Prints: 20
 		
+		// Incrementing timesdied
+		var inc = roomdata.get(socket, "timesdied") + 10;
+		roomdata.set(socket, "timesdied", inc);
+		console.log(roomdata.get(socket, "timesdied")); // Prints: 15
+		
 		// Standard variables when a room is created:
 		console.log(roomdata.get(socket, "users")); // Prints: array full of current users in room (socket.id)
-		console.log(roomdata.get(socket, "room")); // Prints: current room name this socket is 
+		console.log(roomdata.get(socket, "room")); // Prints: current room name this socket is in
 		console.log(roomdata.get(socket, "owner")); // Prints: the socket.id that created the room
 		
 		// Important: It is not yet possible to use get and set if a socket is in two rooms at once!

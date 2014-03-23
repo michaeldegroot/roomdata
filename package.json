@@ -1,27 +1,24 @@
 {
-  "name": "console-debug",
-  "version": "0.1.7",
-  "description": "Replaces the console object with a more stylish and practical way of displaying notices,warn,info,debug,log and errors. There is also the ability to catch uncaughtExceptions, disable the output colors, and log to file. You can also setup filters if you want the console or log to file not showing a certain debug message type.",
-  "main": "debug.js",
+  "name": "roomdata",
+  "version": "0.0.1",
+  "description": "Ability to create room variables for people that use socket.io",
+  "main": "roomdata.js",
   "scripts": {
     "test": "node test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:michaeldegroot/console-debug.git"
+    "url": "git@bitbucket.org:michaeldegroot/roomdata.git"
   },
   "keywords": [
-    "debug",
-    "trace",
-    "console",
-    "log",
-    "output"
+    "socket.io",
+    "room",
+    "variable",
+    "room variables",
+    "room variable",
+	"room data",
+	"roomdata"
   ],
   "author": "Michael de Groot",
-  "dependencies": {
-     "cli-color": ">= 0.2.3",
-     "dateformat": ">= 1.0.7-1.2.3",
-	 "path": ">= 0.4.9"
-  },
   "license": "BSD-2-Clause"
 }
