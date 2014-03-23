@@ -1,6 +1,6 @@
 {
   "name": "roomdata",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Ability to create room variables for people that use socket.io",
   "main": "roomdata.js",
   "scripts": {

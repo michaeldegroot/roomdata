@@ -56,7 +56,7 @@
 	console.log(roomdata.get(socket, "gamedata")); // Prints: { x: 4, y: 20 }
 	console.log(roomdata.get(socket, "gamedata").y); // Prints: 20
 	
-## 4. Make sure to define a disconnect handler and call gamedata.leaveRoom with socket as parameter
+## 4. Make sure to define a disconnect handler and call roomdata.leaveRoom with socket as parameter
     
     socket.on('disconnect', function() {
 		roomdata.leaveRoom(socket);
