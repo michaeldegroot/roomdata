@@ -51,7 +51,7 @@
 	
 ## 3. Now you can do stuff like:
 
-    roomdata.joinRoom(socket, "testroom");
+    roomdata.joinRoom(socket, "testroom"); // if you want to use roomdata features you will have to replace your socket.join with this line
 	
 	roomdata.set(socket, "gamedata", {x:4, y:20});
 	
@@ -61,7 +61,7 @@
 ## 4. Make sure to define a disconnect handler and call roomdata.leaveRoom with socket as parameter
     
     socket.on('disconnect', function() {
-		roomdata.leaveRoom(socket);
+		roomdata.leaveRoom(socket); // if you want to use roomdata features you will have to replace your socket.leave with this line
 	});
 	
 ## 5. Only needed if you have a existing project
