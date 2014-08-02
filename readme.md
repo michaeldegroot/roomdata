@@ -64,5 +64,11 @@
 		roomdata.leaveRoom(socket);
 	});
 	
+## 5. Only needed if you have a existing project
+
+    Change all your socket.join and socket.leave to roomdata.joinRoom and roomdata.leaveRoom if you want to use the roomdata features.
+	
 # Contact
     You can contact me at specamps@gmail.com
+
+	

@@ -1,6 +1,6 @@
 {
   "name": "roomdata",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "description": "Ability to create room variables for people that use socket.io",
   "main": "roomdata.js",
   "scripts": {
@@ -16,9 +16,34 @@
     "variable",
     "room variables",
     "room variable",
-	"room data",
-	"roomdata"
+    "room data",
+    "roomdata"
   ],
-  "author": "Michael de Groot",
-  "license": "BSD-2-Clause"
+  "author": {
+    "name": "Michael de Groot"
+  },
+  "license": "BSD-2-Clause",
+  "_id": "roomdata@0.0.5",
+  "_shasum": "e7b55a92d4487446b19909c4facd77d5a3000040",
+  "_from": "roomdata@",
+  "_resolved": "https://registry.npmjs.org/roomdata/-/roomdata-0.0.5.tgz",
+  "_npmVersion": "1.4.9",
+  "_npmUser": {
+    "name": "michaeldegroot",
+    "email": "specamps@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "michaeldegroot",
+      "email": "specamps@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "abee33170cf4919def0026c9697d8794e1fab92f",
+    "tarball": "http://registry.npmjs.org/roomdata/-/roomdata-0.0.5.tgz"
+  },
+  "directories": {},
+  "dependencies": {
+    "connect": "^3.1.0"
+  }
 }
