@@ -64,7 +64,7 @@
 		roomdata.leaveRoom(socket); // if you want to use roomdata features you will have to replace your socket.leave with this line
 	});
 	
-## 5. Only needed if you have a existing project
+## 5. Make sure to replace existing socket.join and socket.leave in your project
 
     Change all your socket.join and socket.leave to roomdata.joinRoom and roomdata.leaveRoom if you want to use the roomdata features.
 	
