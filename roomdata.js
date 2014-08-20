@@ -45,9 +45,17 @@ exports.joinRoom = function(socket, room) {
 	socket.roomdata_room = room;
 };
 
+exports.clearRoom = function(room) {
+	delete this.rooms[room];
+};
+
 exports.leaveRoom = function(socket) {
+	var room = socket.roomdata_room;
 	if(Debug) console.log(socket.id+": Leaving room: "+socket.roomdata_room);
 	var i = this.rooms[socket.roomdata_room].users.indexOf(socket.id);
 	if(i != -1) this.rooms[socket.roomdata_room].users.splice(i, 1);
 	socket.leave(socket.roomdata_room);
+	if(this.rooms[room].users.length == 0) {
+		this.clearRoom(room);
+	}
 }
