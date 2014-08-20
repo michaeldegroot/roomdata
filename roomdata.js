@@ -56,6 +56,6 @@ exports.leaveRoom = function(socket) {
 	if(i != -1) this.rooms[socket.roomdata_room].users.splice(i, 1);
 	socket.leave(socket.roomdata_room);
 	if(this.rooms[room].users.length == 0) {
-		this.clearRoom[room];
+		this.clearRoom(room);
 	}
 }
