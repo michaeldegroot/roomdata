@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/roomdata.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/roomdata/)
+
 # What it does
 
 ###### Ability to create room variables for people that use socket.io. It was kind of strange to see that there was no room variable solution for socket.io out of the box. ######
