@@ -1,4 +1,9 @@
-[![NPM](https://nodei.co/npm/roomdata.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/roomdata/)
+![NPM](https://nodei.co/npm/roomdata.png?downloads=true&downloadRank=true&stars=true)
+
+[ ![](https://david-dm.org/michaeldegroot/roomdata.svg "deps") ](https://david-dm.org/michaeldegroot/roomdata "david-dm")
+[ ![](https://travis-ci.org/michaeldegroot/roomdata.svg?branch=master "testing") ](https://travis-ci.org/michaeldegroot/roomdata "travis-ci")
+![NPM](https://img.shields.io/badge/Node-%3E%3D0.10-green.svg)
+
 
 # What it does
 
