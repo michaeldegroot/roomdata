@@ -1,11 +1,6 @@
-var connect = require('connect'),
-serveStatic = require('serve-static'),
-app = connect();
-
-app.use(serveStatic('public', {'index': 'index.html'})).listen(80);
-
 var roomdata = require('./roomdata'),
 io = require('socket.io').listen(8080);
+var clientIo = require('socket.io-client');
 
 io.sockets.on('connection', function (socket) {
 	// Lets join/create a room:
@@ -37,3 +32,13 @@ io.sockets.on('connection', function (socket) {
 		roomdata.leaveRoom(socket);
 	});
 });
+
+var socket = clientIo.connect('http://localhost:8080');
+socket.on('news', function (data) {
+	console.log(data);
+	socket.emit('my other event', { my: 'data' });
+});
+
+setTimeout(function(){
+	process.exit();
+},5000);
