@@ -1,6 +1,6 @@
 {
   "name": "roomdata",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Ability to create room variables for people that use socket.io",
   "main": "roomdata.js",
   "scripts": {
@@ -22,7 +22,7 @@
   "author": {
     "name": "Michael de Groot"
   },
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "_id": "roomdata@1.0.0",
   "_shasum": "543d2228f40f7ed880fbaebd248543350e6a747a",
   "_from": "roomdata@",
