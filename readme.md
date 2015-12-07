@@ -4,7 +4,7 @@
 [ ![](https://travis-ci.org/michaeldegroot/roomdata.svg?branch=master "testing") ](https://travis-ci.org/michaeldegroot/roomdata "travis-ci")
 ![NPM](https://img.shields.io/badge/Node-%3E%3D0.10-green.svg)
 ![](https://img.shields.io/npm/dt/roomdata.svg)
-![](	https://img.shields.io/npm/l/express.svg)
+![](https://img.shields.io/npm/l/roomdata.svg)
 
 
 # What it does

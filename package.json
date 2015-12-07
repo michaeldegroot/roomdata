@@ -1,6 +1,6 @@
 {
   "name": "roomdata",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Ability to create room variables for people that use socket.io",
   "main": "roomdata.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:michaeldegroot/roomdata.git"
+    "url": "git@github.com:michaeldegroot/roomdata.git"
   },
   "keywords": [
     "socket.io",
