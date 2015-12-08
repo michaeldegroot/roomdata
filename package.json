@@ -22,28 +22,10 @@
     "roomdata"
   ],
   "author": {
-    "name": "Michael de Groot"
-  },
-  "license": "MIT",
-  "_id": "roomdata@1.0.0",
-  "_shasum": "543d2228f40f7ed880fbaebd248543350e6a747a",
-  "_from": "roomdata@",
-  "_resolved": "https://registry.npmjs.org/roomdata/-/roomdata-0.0.5.tgz",
-  "_npmVersion": "1.4.9",
-  "_npmUser": {
-    "name": "michaeldegroot",
+    "name": "Michael de Groot",
     "email": "specamps@gmail.com"
   },
-  "maintainers": [
-    {
-      "name": "michaeldegroot",
-      "email": "specamps@gmail.com"
-    }
-  ],
-  "dist": {
-    "shasum": "abee33170cf4919def0026c9697d8794e1fab92f",
-    "tarball": "http://registry.npmjs.org/roomdata/-/roomdata-0.0.5.tgz"
-  },
+  "license": "MIT",
   "directories": {},
   "dependencies": {
     "socket.io": "^1.3.7",
@@ -53,8 +35,10 @@
     "assert": "^1.3.0",
     "assert-plus": "^0.2.0",
     "coveralls": "^2.11.4",
+    "express": "^4.13.3",
     "istanbul": "^0.4.1",
     "mocha": "^2.3.4",
-    "mocha-lcov-reporter": "^1.0.0"
+    "mocha-lcov-reporter": "^1.0.0",
+    "request": "^2.67.0"
   }
 }
