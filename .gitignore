@@ -2,6 +2,5 @@
 *.sh
 node_modules
 npm-debug.log
-test
 .coveralls.yml
 coverage
