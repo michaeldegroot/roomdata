@@ -1,6 +1,6 @@
 {
   "name": "roomdata",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Ability to create room variables for people that use socket.io",
   "main": "roomdata.js",
   "scripts": {
@@ -26,7 +26,6 @@
     "email": "specamps@gmail.com"
   },
   "license": "MIT",
-  "directories": {},
   "dependencies": {
     "socket.io": "^1.3.7",
     "socket.io-client": "^1.3.7"

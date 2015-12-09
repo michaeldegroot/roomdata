@@ -1,4 +1,4 @@
-var Debug = false;
+exports.Debug = false;
 
 exports.rooms = {};
 
@@ -8,12 +8,12 @@ exports.roomExists = function(socket, room) {
 };
 
 exports.createRoom = function(socket, room) {
-	if(Debug) console.log(socket.id+": Creating Room: "+room);
+	if(exports.Debug) console.log(socket.id+": Creating Room: "+room);
 	this.rooms[room] = {owner:socket.id, users:[], variables: {}};
 }
 
 exports.set = function(socket, variable, content) {
-	if(Debug) console.log(socket.id+": Creating variable: "+variable+" with content: "+content);
+	if(exports.Debug) console.log(socket.id+": Creating variable: "+variable+" with content: "+content);
 	if(!this.roomExists(socket, socket.roomdata_room)){
 		console.error("You have tried setting a room variable but this socket is not in any room!");
 		return false;
@@ -22,7 +22,7 @@ exports.set = function(socket, variable, content) {
 }
 
 exports.get = function(socket, variable, content) {
-	if(Debug) console.log(socket.id+": Getting variable: "+variable);
+	if(exports.Debug) console.log(socket.id+": Getting variable: "+variable);
 	if(variable == "room"){
 		if(!socket.roomdata_room) return undefined;
 		return socket.roomdata_room;
@@ -37,7 +37,7 @@ exports.get = function(socket, variable, content) {
 }
 
 exports.joinRoom = function(socket, room) {
-	if(Debug) console.log(socket.id+": Joining room: "+room);
+	if(exports.Debug) console.log(socket.id+": Joining room: "+room);
 	if(socket.roomdata_room) this.leaveRoom(socket, room);
 	if(!this.roomExists(socket, room)) this.createRoom(socket, room);
 	this.rooms[room].users.push(socket.id);
@@ -51,7 +51,8 @@ exports.clearRoom = function(room) {
 
 exports.leaveRoom = function(socket) {
 	var room = socket.roomdata_room;
-	if(Debug) console.log(socket.id+": Leaving room: "+socket.roomdata_room);
+	if(socket.roomdata_room==undefined) throw new Error("socket id:" + socket.id + " is not in a room!");
+	if(exports.Debug) console.log(socket.id+": Leaving room: "+socket.roomdata_room);
 	var i = this.rooms[socket.roomdata_room].users.indexOf(socket.id);
 	if(i != -1) this.rooms[socket.roomdata_room].users.splice(i, 1);
 	socket.leave(socket.roomdata_room);
