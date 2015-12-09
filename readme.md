@@ -1,7 +1,6 @@
-![NPM](https://nodei.co/npm/roomdata.png?downloads=true&downloadRank=true&stars=true)
-
-[ ![](https://david-dm.org/michaeldegroot/roomdata.svg "deps") ](https://david-dm.org/michaeldegroot/roomdata "david-dm")
-[ ![](https://travis-ci.org/michaeldegroot/roomdata.svg?branch=master "testing") ](https://travis-ci.org/michaeldegroot/roomdata "travis-ci")
+![](https://nodei.co/npm/roomdata.png?downloads=true&downloadRank=true&stars=true)  
+[![](https://david-dm.org/michaeldegroot/roomdata.svg "deps") ](https://david-dm.org/michaeldegroot/roomdata "david-dm")
+[![](https://travis-ci.org/michaeldegroot/roomdata.svg?branch=master "testing") ](https://travis-ci.org/michaeldegroot/roomdata "travis-ci")
 [![Coverage Status](https://coveralls.io/repos/michaeldegroot/roomdata/badge.svg?branch=master&service=github)](https://coveralls.io/github/michaeldegroot/roomdata?branch=master)
 ![NPM](https://img.shields.io/badge/Node-%3E%3D0.10-green.svg)
 ![](https://img.shields.io/npm/dt/roomdata.svg)
@@ -25,7 +24,7 @@ ___
     npm install roomdata
 
 ##### 2. Do awesome stuff
-```
+````js
 var roomdata = require('roomdata');
 
 // When you want a user to join a room
@@ -40,7 +39,7 @@ console.log(roomdata.get(socket, "gamedata").y);    // Prints: 20
 
 // When you want a user to leave a room
 roomdata.leaveRoom(socket); // you will have to replace your socket.leave with this line
-```
+````
 ___
 ## API
 
@@ -52,11 +51,11 @@ __IMPORTANT__: _You have to use roomdata.joinRoom instead of socket.join or the 
 
 __Example__
 
-```javascript
+````js
 io.sockets.on('connection', function (socket) {
     roomdata.joinRoom(socket, "testroom"); // You do not have to create a room before joining it
 });
-```
+````
 ___
 ###  .leaveRoom(socket)
     socket: The user socket variable
@@ -65,13 +64,13 @@ __IMPORTANT__: _You have to use roomdata.leaveRoom instead of socket.leave or th
 
 __Example__
 
-```javascript
+````js
 io.sockets.on('connection', function (socket) {
     socket.on('disconnect', function() {
     		roomdata.leaveRoom(socket);
 	});
 });
-```
+````
 ___
 ###  .set(socket, name, value)
 	socket: The user socket variable
@@ -82,12 +81,12 @@ _Sets a room variable_
 
 __Example__
 
-```javascript
+````js
 io.sockets.on('connection', function (socket) {
 	roomdata.set(socket, "gamedata", {x:4, y:20}); // Creates a room variable called 'gamedata'
 	roomdata.set(socket, "timesdied", 5); // Can also be a number, string, boolean, object etc
 });
-```
+````
 ___
 ###  .get(socket, name)
 	socket: The user socket variable
@@ -97,15 +96,16 @@ _Gets a room variable_
 
 __Example__
 
-```javascript
+````js
 io.sockets.on('connection', function (socket) {
 	console.log(roomdata.get(socket, "gamedata")); // Prints: { x: 4, y: 20 }
 	console.log(roomdata.get(socket, "gamedata").y); // Prints: 20
 });
-```
+````
 
 
 
 ___
 # Contact
+
 You can contact me at specamps@gmail.com
