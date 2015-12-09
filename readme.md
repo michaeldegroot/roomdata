@@ -14,7 +14,7 @@ It was kind of strange to see that there was no room variable solution out of th
 [You can find a demo on how it looks here](https://bitbucket.org/repo/EaxM4K/images/4033599328-roomdata.gif)
 ___
 # Changelog
-https://github.com/michaeldegroot/roomdata/commits/master
+[https://github.com/michaeldegroot/roomdata/commits/master](https://github.com/michaeldegroot/roomdata/commits/master)
 
 ___
 #  Getting Started
