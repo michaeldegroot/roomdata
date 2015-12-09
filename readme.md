@@ -24,31 +24,31 @@ ___
 
     npm install roomdata
 
-##### 2. Require the module
+##### 2. Do awesome stuff
 ```
 var roomdata = require('roomdata');
-````	
-##### 3. When you want a user to join a room:
-```
+
+// When you want a user to join a room
 roomdata.joinRoom(socket, "testroom"); // You will have to replace your socket.join with this line
-````
 
-##### 4. Replace some code to your on disconnect event
+// Creates a room variable called 'gamedata'
+roomdata.set(socket, "gamedata", {x:4, y:20});
+
+// Gets the room variable called 'gamedata'
+console.log(roomdata.get(socket, "gamedata"));      // Prints: { x: 4, y: 20 }
+console.log(roomdata.get(socket, "gamedata").y);    // Prints: 20
+
+// When you want a user to leave a room
+roomdata.leaveRoom(socket); // you will have to replace your socket.leave with this line
 ```
-socket.on('disconnect', function() {
-	roomdata.leaveRoom(socket); // you will have to replace your socket.leave with this line
-});
-````
-
 ___
 ## API
 
 ###  .joinRoom(socket, roomid)
-
-##### Options:
-	socket: the user socket variable
-	roomid: chosen room name
-_You have to use roomdata.joinRoom instead of socket.join or the module will __FAIL___
+	socket: The user socket variable
+	roomid: Chosen room name
+_Joines a room_  
+__IMPORTANT__: _You have to use roomdata.joinRoom instead of socket.join or the module will __FAIL___
 
 __Example__
 
@@ -59,10 +59,9 @@ io.sockets.on('connection', function (socket) {
 ```
 ___
 ###  .leaveRoom(socket)
-
-##### Options:
-	socket: the user socket variable
-_You have to use roomdata.leaveRoom instead of socket.leave or the module will __FAIL___
+    socket: The user socket variable
+_Leaves a room_  
+__IMPORTANT__: _You have to use roomdata.leaveRoom instead of socket.leave or the module will __FAIL___
 
 __Example__
 
@@ -75,11 +74,11 @@ io.sockets.on('connection', function (socket) {
 ```
 ___
 ###  .set(socket, name, value)
+	socket: The user socket variable
+	name:   The name for the variable in string format
+	value:  The variable you want to set
 
-##### Options:
-	socket: the user socket variable
-	name: the name for the variable in string format
-	value: the variable you want to set
+_Sets a room variable_
 
 __Example__
 
@@ -91,10 +90,10 @@ io.sockets.on('connection', function (socket) {
 ```
 ___
 ###  .get(socket, name)
+	socket: The user socket variable
+	name:   The name of the variable in string format
 
-##### Options:
-	socket: the user socket variable
-	name: the name of the variable in string format
+_Gets a room variable_
 
 __Example__
 
@@ -109,6 +108,4 @@ io.sockets.on('connection', function (socket) {
 
 ___
 # Contact
-    You can contact me at specamps@gmail.com
-
-	
+You can contact me at specamps@gmail.com
