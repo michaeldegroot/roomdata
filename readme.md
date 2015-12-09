@@ -1,4 +1,4 @@
-![](https://nodei.co/npm/roomdata.png?downloads=true&downloadRank=true&stars=true)  
+[![](https://nodei.co/npm/roomdata.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/roomdata)  
 [![](https://david-dm.org/michaeldegroot/roomdata.svg "deps") ](https://david-dm.org/michaeldegroot/roomdata "david-dm")
 [![](https://travis-ci.org/michaeldegroot/roomdata.svg?branch=master "testing") ](https://travis-ci.org/michaeldegroot/roomdata "travis-ci")
 [![](https://coveralls.io/repos/michaeldegroot/roomdata/badge.svg?branch=master&service=github)](https://coveralls.io/github/michaeldegroot/roomdata?branch=master)
