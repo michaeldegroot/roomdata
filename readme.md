@@ -44,8 +44,10 @@ ___
 ## API
 
 ###  .joinRoom(socket, roomid)
-	socket: The user socket variable
-	roomid: Chosen room name
+```js
+socket:     Object      // The user socket variable
+roomid:     String      // Chosen room name
+```
 _Joines a room_  
 __IMPORTANT__: _You have to use roomdata.joinRoom instead of socket.join or the module will __FAIL___
 
@@ -58,7 +60,9 @@ io.sockets.on('connection', function (socket) {
 ````
 ___
 ###  .leaveRoom(socket)
-    socket: The user socket variable
+```js
+socket:     Object      // The user socket variable
+```
 _Leaves a room_  
 __IMPORTANT__: _You have to use roomdata.leaveRoom instead of socket.leave or the module will __FAIL___
 
@@ -73,9 +77,11 @@ io.sockets.on('connection', function (socket) {
 ````
 ___
 ###  .set(socket, name, value)
-	socket: The user socket variable
-	name:   The name for the variable in string format
-	value:  The variable you want to set
+```js
+socket:     Object      // The user socket variable
+name:       String      // The name for the variable you want to set
+value:      Value       // The variable you want to set
+```
 
 _Sets a room variable_
 
@@ -89,8 +95,10 @@ io.sockets.on('connection', function (socket) {
 ````
 ___
 ###  .get(socket, name)
-	socket: The user socket variable
-	name:   The name of the variable in string format
+```js
+socket:     Object      // The user socket variable
+name:       String      // The name for the variable you want to get
+```
 
 _Gets a room variable_
 
