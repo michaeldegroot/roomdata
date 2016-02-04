@@ -41,7 +41,7 @@ describe("Internal", function(){
 		assert.equal(roomdata.get(clientSocket, "room"),"testroom");
 	});
 	it('Get owner of room', function(){
-		assert.equal(roomdata.get(clientSocket, "owner").length,20);
+		assert.equal(roomdata.get(clientSocket, "owner").length,22);
 	});
 	it('Get users of room', function(){
 		assert.object(roomdata.get(clientSocket, "users"));
