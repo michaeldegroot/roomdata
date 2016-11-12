@@ -41,14 +41,14 @@ describe("Internal", function(){
 		assert.equal(roomdata.get(clientSocket, "room"),"testroom");
 	});
 	it('Get owner of room', function(){
-		assert.equal(roomdata.get(clientSocket, "owner").length,22);
+		assert.equal(roomdata.get(clientSocket, "owner").length,20);
 	});
 	it('Get users of room', function(){
 		assert.object(roomdata.get(clientSocket, "users"));
 	});
 	it('Set a variable in the room', function(){
 		assert.doesNotThrow(function(){
-			roomdata.set(clientSocket, "gamedata","TEST"); 
+			roomdata.set(clientSocket, "gamedata","TEST");
 		},Error);
 	});
 	it('Does the created variable exists?', function(){
