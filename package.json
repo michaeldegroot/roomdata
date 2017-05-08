@@ -29,7 +29,7 @@
   "devDependencies": {
     "assert": "^1.3.0",
     "socket.io": "^1.3.7",
-    "socket.io-client": "^1.3.7",
+    "socket.io-client": "^2.0.0",
     "assert-plus": "^1.0.0",
     "coveralls": "^2.11.4",
     "express": "^4.13.3",
